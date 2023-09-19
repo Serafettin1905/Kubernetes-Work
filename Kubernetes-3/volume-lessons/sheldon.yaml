@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: clarus-pv-vol-5
+spec:
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual
+  hostPath:
+    path: "/home/ubuntu/pv-data"
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: clarus-pv-vol-2
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual
+  hostPath:
+    path: "/home/ubuntu/pv-data"
+
+--- 
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: clarus-pv-claim-7
+spec:
+  resources:
+    requests:
+      storage: 7Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual
+
+--- 
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: clarus-pv-claim-4
+spec:
+  resources:
+    requests:
+      storage: 4Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual
