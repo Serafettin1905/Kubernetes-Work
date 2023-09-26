@@ -1,0 +1,6 @@
+---
+kubectl port-forward pod/multicontainer 8080:80
+---
+kubectl create secret generic my-secret --from-literal=username=devuser --from-literal=password='S!B\*d$zDsb=' --dry-run=client -o yaml > mysecrets.yaml
+---
+kubectl create deploy mydeploy --image=nginx --dry-run=client -o yaml > mydeploy.yaml

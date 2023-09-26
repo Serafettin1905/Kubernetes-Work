@@ -9,6 +9,6 @@ spec:
     - ReadWriteOnce
   storageClassName: manual
   hostPath:
-    path: "/home/ubuntu/pv-data"
+    path: "/c/Users/seraf/OneDrive/Masaüstü/Kubernetes-Work/Kubernetes-3/pv-data"
 
   
